@@ -1,0 +1,26 @@
+.counterBody {
+    background-color: rgb(51, 51, 51);
+    width: 450px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0% auto;
+    padding: 15px;
+    margin-top: 50px;
+    
+
+}
+    
+.seconds {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+

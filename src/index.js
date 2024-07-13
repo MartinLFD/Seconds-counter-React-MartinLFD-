@@ -1,17 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Secondscounter from './components/Secondscount';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let seconds = 0;
+setInterval(() => {
+  let six = Math.floor( seconds / 100000);
+  let five = Math.floor(seconds / 10000);
+  let four = Math.floor(seconds /1000);
+  let three = Math.floor(seconds / 100);
+  let two = Math.floor(seconds / 10);
+  let one = seconds;
+  seconds++
+  root.render(
+<React.StrictMode>
+<Secondscounter 
+  positionSix={six}
+  positionFive={five}
+  positionFour={four}
+  positionThree={three}
+  positionTwo={two}
+  positionOne={one}
+    
+/>
+</React.StrictMode>
+
+
+
+);
+}, 1000)
+console.log(Secondscounter());
+
+
+
